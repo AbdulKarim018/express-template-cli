@@ -1,0 +1,30 @@
+{
+  "name": "@abdulkarim018/express-templates",
+  "version": "0.0.3",
+  "description": "A Useful CLI Tool to help you Kickstart your Express Application!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdulKarim018/express-template-cli.git"
+  },
+  "keywords": [
+    "express",
+    "cli",
+    "mern"
+  ],
+  "author": "Abdul Karim",
+  "license": "MIT",
+  "bin": {
+    "express-templates": "./index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/AbdulKarim018/express-template-cli/issues"
+  },
+  "homepage": "https://github.com/AbdulKarim018/express-template-cli#readme",
+  "dependencies": {
+    "inquirer": "^8.2.6"
+  }
+}
