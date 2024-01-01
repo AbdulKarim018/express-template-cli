@@ -49,7 +49,9 @@ inquirer.prompt(questions).then((answers) => {
 
   createDirectoryContents(templateDir, answers.name);
   answers.install ? installDependencies(answers.name) : null;
-  console.log('Project Ready!');
+  console.log(`
+  Project Created Successfully! type npm run dev to start the development server!
+  `);
 });
 
 function createDirectoryContents(templateDir, projectName) {
@@ -78,11 +80,12 @@ function createDirectoryContents(templateDir, projectName) {
 
 const installDependencies = (projectName) => {
   console.log('Installing dependencies...');
-  exec(`cd ${currentDir}/${projectName} && npm install`, (err, stdout, stderr) => {
+  exec(`cd ${path.join(currentDir, projectName)} && npm install`, (err, stdout, stderr) => {
     if (err) {
       console.error(err);
       return;
     }
-    console.log(stdout);
+    // console.log(stdout);
+    console.log('Dependencies installed successfully!')
   });
 };
